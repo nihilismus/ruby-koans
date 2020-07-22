@@ -1,0 +1,3 @@
+[submodule "ruby_koans"]
+	path = ruby_koans
+	url = https://github.com/edgecase/ruby_koans
