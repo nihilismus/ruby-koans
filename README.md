@@ -48,3 +48,16 @@
    - Q: We say that the repetition operators above are "greedy". Why?
    - A: Because they operate over the hole string in one pass, without tracking
         repetition of matching patterns.
+
+- `koans/about_constants.rb`
+
+   - Q: Which has precedence: The constant in the lexical scope, or the constant from
+        the inheritance hierarchy?
+   - A: The constants from the lexical scope.
+        [https://valve.github.io/blog/2013/10/26/constant-resolution-in-ruby/]
+   - Q: Now which has precedence: The constant in the lexical scope, or the constant
+        from the inheritance hierarchy?  Why is it different than the previous answer?
+   - A: The constants from the inheritance hierarchy. Because the class was defined
+        outside of it's outer class.
+        [https://valve.github.io/blog/2013/10/26/constant-resolution-in-ruby/]
+
