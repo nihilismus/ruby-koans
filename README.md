@@ -61,3 +61,23 @@
         outside of it's outer class.
         [https://valve.github.io/blog/2013/10/26/constant-resolution-in-ruby/]
 
+- `koans/about_iteration.rb`
+
+   - EC: Describe in your own words what `inject` does.
+   - A: Iterates over the array with an *accumulation* and a *function*, applying
+        the given function with the *accumulation* and one of the elements of the
+	array, the result of the funtion is used as a new *accumulation* for the next
+	iteration.
+   - Q: In the previous koan, we saw the construct:
+
+         File.open(filename) do |file|
+           # code to read 'file'
+         end
+
+     Why did we do it that way instead of the following?
+
+         file = File.open(filename)
+         # code to read 'file'
+
+   - A: Compactness. `File.open` can take a function wich is going to receive the
+        content of the file.
