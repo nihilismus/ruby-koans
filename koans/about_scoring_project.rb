@@ -29,8 +29,28 @@ require File.expand_path(File.dirname(__FILE__) + '/neo')
 #
 # Your goal is to write the score method.
 
+def points_for(v, f, x, y)
+  t = 0
+  if f[v] >= 3
+    t += x
+    f[v] = f[v] - 3
+  end
+  t += f[v] * y
+end
+
 def score(dice)
-  # You need to write this method
+  total = 0
+  frequencies = {}
+  (1..6).each { |value| frequencies[value] = dice.count value }
+  # Points for 1
+  total += points_for(1, frequencies, 1000, 100)
+  # Points for 5
+  total += points_for(5, frequencies, 500, 50)
+  # Points for 2,3,4 & 6
+  [2, 3, 4, 6].each do |value|
+    total += value * 100 if (frequencies[value] == 3)
+  end
+  total
 end
 
 class AboutScoringProject < Neo::Koan
