@@ -81,3 +81,10 @@
 
    - A: Compactness. `File.open` can take a function wich is going to receive the
         content of the file.
+
+- `koans/about_classes.rb`
+
+   - Q: In `test_args_to_new_must_match_initialize`. Think about it: Why is this so?.
+   - A: `new` implies the construction of an instance and `initialize` is the method
+        responsible of this behaviour so the number of arguments must match.
+
