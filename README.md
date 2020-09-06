@@ -84,7 +84,48 @@
 
 - `koans/about_classes.rb`
 
-   - Q: In `test_args_to_new_must_match_initialize`. Think about it: Why is this so?.
+   - Q: In `test_args_to_new_must_match_initialize`. THINK ABOUT IT: Why is this so?.
    - A: `new` implies the construction of an instance and `initialize` is the method
         responsible of this behaviour so the number of arguments must match.
 
+- `koans/about_dice_project.rb`
+
+   - Q: THINK ABOUT IT: If the rolls are random, then it is possible (although not
+        likely) that two consecutive rolls are equal.  What would be a better way to
+	test this?
+   - A: Implement a class-test which records the consecutive call of `dice.roll(x)` in
+        a loop with, let's say, 100 iterations.
+
+- `koans/about_class_methods.rb`
+
+   - Q: THINK ABOUT IT: The two major ways to write class methods are:
+
+         class Demo
+           def self.method
+           end
+          
+           class << self
+             def class_methods
+             end
+           end
+         end
+        Which do you prefer and why?
+        Are there times you might prefer one over the other?
+   - A: I prefer `def self.method; end` because it has the same meaning as `self.attribute`
+        but also because when one has multiple methods defined in such way you can visually
+	differenciate them of the rest. Maybe I would use the second way when adding some
+	new methods and if they work then I move them to the other syntax.
+
+- `koans/about_message_passing.rb`
+
+   - Q: THINK ABOUT IT: Why does Ruby provide both `send` and `__send__`?
+   - A: A class can define a `send` method by need of its context-meaning so there is a need
+        to differenciate its `send` method with the meaning of `send` from `Object`.
+	[https://stackoverflow.com/a/4658359]
+
+- `koans/about_message_passing.rb`
+
+   - Q: THINK ABOUT IT: If the method `:method_missing` causes the `NoMethodError`, then
+        what would happen if we redefine `method_missing`?
+   - A: The error is avoided by intercepting the message sended to the object.
+        [https://www.leighhalliday.com/ruby-metaprogramming-method-missing]
