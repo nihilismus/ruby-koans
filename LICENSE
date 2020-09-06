@@ -1,0 +1,17 @@
+Copyright © 2020 Antonio Hernández Blas <hba.nihilismus@gmail.com>
+
+The files `Makefile` and `README.md` are free.
+You can redistribute it and/or modify it under the
+terms of the Do What The Fuck You Want To Public License, Version 2,
+as published by Sam Hocevar. See http://www.wtfpl.net/ for more details.
+
+The directory `koans` is released under a Creative Commons,
+Attribution-NonCommercial-ShareAlike, Version 3.0
+(http://creativecommons.org/licenses/by-nc-sa/3.0/) License.
+
+---
+
+The directory `ruby_koans` is released under a Creative Commons,
+Attribution-NonCommercial-ShareAlike, Version 3.0
+(http://creativecommons.org/licenses/by-nc-sa/3.0/) License.
+Please read <ruby_koans/README.rdoc> for more information.
